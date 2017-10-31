@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#37479e</color>
+    <color name="colorPrimaryDark">#2d3a83</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="crna">#000000</color>
+    <color name="zeleb">#1f1f1f</color>
+    <color name="dugme">#bb1641</color>
+</resources>
