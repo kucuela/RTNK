@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_create"
+        android:title="Home"
+        android:icon="@drawable/houm"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_update"
+        android:title="RTN"
+        android:icon="@drawable/fast1"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_delete"
+        android:title="Dopuš"
+        android:icon="@drawable/dopus2"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

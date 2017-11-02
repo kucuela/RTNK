@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kordi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <!-- Toolbar is a standard toolbar for use within application content. -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:title="@string/activity_first_toolbar_title"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:layout_scrollFlags="scroll|enterAlways">
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:focusableInTouchMode="true"
+        tools:context="studio.kucuela.myapplication.MainActivity">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1">
+
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:layout_marginTop="-30dp"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="0dp"
+                android:src="@drawable/gif2"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-35dp">
+
+                <LinearLayout
+                    android:id="@+id/glavnivertikal1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.44"
+
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:background="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/rtn"
+                            android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="RTN \nopšta naduvanost"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="17sp"/>
+
+                        <Spinner
+                            android:id="@+id/spinner6a"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+
+                            android:layout_marginTop="0dp"
+
+
+                            android:background="@color/colorPrimary"
+                            android:spinnerMode="dropdown"/>
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/kaca"
+                            android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="KACA \ndubina ludila"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="17sp"/>
+
+                        <Spinner
+                            android:id="@+id/spinner7a"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+
+
+                            android:background="@color/colorPrimary"
+                            android:spinnerMode="dropdown"/>
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/more"
+                            android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="MORE ILI OBLACI \nambijent mora ili ambijent oblaka"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="17sp"/>
+
+                        <Spinner
+                            android:id="@+id/spinner8a"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+
+                            android:layout_marginTop="0dp"
+
+
+                            android:background="@color/colorPrimary"
+                            android:spinnerMode="dropdown"/>
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/svetla"
+                            android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="SVETLA \ndominantna boja svetla napolju"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="17sp"/>
+
+                        <Spinner
+                            android:id="@+id/spinner9a"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+
+                            android:layout_marginTop="0dp"
+
+
+                            android:background="@color/colorPrimary"
+                            android:spinnerMode="dropdown"/>
+
+                        <EditText
+                            android:id="@+id/textView100a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                        <TextView
+                            android:id="@+id/textView666"
+                            android:layout_width="375dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/dodaj"
+                            android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="OPŠTI UTISAK/NAPOMENE \ndodajte šta god mislite da je potrebno"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp"/>
+
+                        <EditText
+                            android:id="@+id/editText11a"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+
+                            android:background="@color/colorPrimary"
+                            android:focusedByDefault="false"
+                            android:gravity="top"
+                            android:inputType="textMultiLine"/>
+
+                        <EditText
+                            android:id="@+id/textview800a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                        <EditText
+                            android:id="@+id/textView200a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                        <EditText
+                            android:id="@+id/textview900a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                        <EditText
+                            android:id="@+id/textview1000a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                        <TextView
+                            android:id="@+id/textViewZlodia"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text="TextView"
+                            android:textColor="@android:color/white"/>
+
+                        <EditText
+                            android:id="@+id/textview500a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                        <EditText
+                            android:id="@+id/textview1100a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                        <EditText
+                            android:id="@+id/textview400a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                        <EditText
+                            android:id="@+id/textview1200a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                        <EditText
+                            android:id="@+id/textview300a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                        <EditText
+                            android:id="@+id/textview600a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                        <EditText
+                            android:id="@+id/textview700a"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!-- Floating action buttons are used for a special type of promoted action. They are distinguished by
+    a circled icon floating above the UI and have special motion behaviors related to morphing, launching, and the transferring anchor point.  -->
+
+    <com.skyfishjy.library.RippleBackground
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/content1a"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="236dp"
+        app:rb_color="@color/colorAccent"
+        app:rb_duration="5000"
+        app:rb_radius="10dp"
+        app:rb_rippleAmount="6"
+        app:rb_scale="5">
+
+    </com.skyfishjy.library.RippleBackground>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_buya"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="10dp"
+
+        android:layout_marginTop="256dp"
+        android:onClick="floatera"
+        android:src="@drawable/share"
+        app:backgroundTint="@color/colorAccent"
+        app:borderWidth="0dp"
+        app:elevation="26dp"
+        app:layout_anchor="@+id/content1a"
+        app:layout_anchorGravity="right|top"
+        tools:layout_editor_absoluteX="284dp"
+        tools:layout_editor_absoluteY="436dp"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

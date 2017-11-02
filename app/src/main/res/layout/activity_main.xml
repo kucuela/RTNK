@@ -5,8 +5,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <!-- Toolbar is a standard toolbar for use within application content. -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:title="@string/activity_first_toolbar_title"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:layout_scrollFlags="scroll|enterAlways">
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
 
     <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,13 +33,14 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/background_light"
+        android:background="@color/colorPrimary"
         android:focusableInTouchMode="true"
         tools:context="studio.kucuela.myapplication.MainActivity">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
             android:background="@color/colorPrimary"
             android:orientation="vertical"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -32,10 +52,10 @@
             <pl.droidsonroids.gif.GifImageView
                 android:layout_width="match_parent"
                 android:layout_height="290dp"
-                android:layout_marginTop="-50dp"
+                android:layout_marginTop="-30dp"
                 android:background="@color/colorPrimaryDark"
                 android:elevation="0dp"
-                android:src="@drawable/your_gif_file_name"/>
+                android:src="@drawable/gif1"/>
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -61,6 +81,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/korisnik"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:paddingLeft="5dp"
                             android:text="KORISNIK \nodaberite korisnika"
                             android:textAlignment="inherit"
@@ -70,7 +91,6 @@
                         <Spinner
                             android:id="@+id/spinner3"
                             android:layout_width="match_parent"
-
                             android:layout_height="40dp"
 
 
@@ -83,6 +103,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/lokacija"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:paddingLeft="5dp"
                             android:text="LOKACIJA \nunesite lokaciju"
                             android:textAlignment="inherit"
@@ -104,6 +125,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/opijat"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:paddingLeft="5dp"
                             android:text="OPIJAT \ntip opijata"
                             android:textAlignment="inherit"
@@ -125,8 +147,9 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/stanje"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:paddingLeft="5dp"
-                            android:text="STANJE DUHA \nraspoloženje uoči konzumacije "
+                            android:text="OPŠTE STANJE \nuoči konzumacije "
                             android:textAlignment="inherit"
                             android:textColor="@android:color/white"
                             android:textSize="17sp"/>
@@ -157,6 +180,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/rtn"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:text="RTN \nopšta naduvanost"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
@@ -180,6 +204,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/kaca"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:text="KACA \ndubina ludila"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
@@ -201,6 +226,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/more"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:text="MORE ILI OBLACI \nambijent mora ili ambijent oblaka"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
@@ -224,6 +250,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/svetla"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:text="SVETLA \ndominantna boja svetla napolju"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
@@ -247,6 +274,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/udarac"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:text="UDARAC \ntip i pravac udarca"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
@@ -292,6 +320,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/aktivnost"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:text="AKTIVNOST \ngeneralna aktivnost napolju"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
@@ -315,6 +344,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/curve"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:text="ZAKRIVLJENOST \nzakrivljenost prostora i tel. ekrana"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
@@ -338,6 +368,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/rtn"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:text="RTNK \nopšta naduvanost po Krtinićevoj skali"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
@@ -361,6 +392,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/kaca"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:text="KACA \ndubina ludila po Krtinićevoj skali"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
@@ -382,9 +414,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/colorPrimaryDark"
-                            android:drawableLeft="@drawable/rz"
+                            android:drawableLeft="@drawable/nogice"
                             android:elevation="7dp"
-                            android:text="ROZE ILI ZELENO \nzeleni ili roze svet "
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="NOGICE \nleva noga pokazuje sate,a desna minute "
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
                             android:textSize="17sp"/>
@@ -407,6 +440,7 @@
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/jakna"
                             android:elevation="7dp"
+                            android:fontFamily="sans-serif-condensed"
                             android:text="JAKNA ILI PAPUČE \nsubjektivni osećaj (feels like)"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
@@ -431,6 +465,7 @@
                             android:drawableLeft="@drawable/help"
                             android:elevation="7dp"
 
+                            android:fontFamily="sans-serif-condensed"
                             android:text="ŠTA IMATE DA DODATE \nnepromenjivi deo svakog testa"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/background_light"
@@ -457,12 +492,13 @@
 
                         <TextView
                             android:id="@+id/textView666"
-                            android:layout_width="match_parent"
+                            android:layout_width="375dp"
                             android:layout_height="wrap_content"
                             android:background="@color/colorPrimaryDark"
                             android:drawableLeft="@drawable/dodaj"
                             android:elevation="7dp"
-                            android:text="OPŠTI UTISAK NADUVANOSTI I NAPOMENE"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="OPŠTI UTISAK/NAPOMENE \ndodajte šta god mislite da je potrebno"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/white"
                             android:textSize="17sp"/>
@@ -470,7 +506,7 @@
                         <EditText
                             android:id="@+id/editText11"
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
+                            android:layout_height="200dp"
 
                             android:background="@color/colorPrimary"
                             android:focusedByDefault="false"
@@ -583,24 +619,46 @@
     </android.support.constraint.ConstraintLayout>
 
 
-
     <!-- Floating action buttons are used for a special type of promoted action. They are distinguished by
     a circled icon floating above the UI and have special motion behaviors related to morphing, launching, and the transferring anchor point.  -->
+
+    <com.skyfishjy.library.RippleBackground
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/content1a"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="236dp"
+        app:rb_color="@color/colorAccent"
+        app:rb_duration="5000"
+        app:rb_radius="10dp"
+        app:rb_rippleAmount="6"
+        app:rb_scale="5">
+
+    </com.skyfishjy.library.RippleBackground>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btn_buy"
         android:layout_width="58dp"
         android:layout_height="58dp"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="298dp"
-        android:layout_marginRight="15dp"
+        android:layout_alignParentEnd="true"
 
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="10dp"
+
+        android:layout_marginTop="256dp"
         android:onClick="floater"
         android:src="@drawable/share"
         app:backgroundTint="@color/colorAccent"
-        app:elevation="26dp"
         app:borderWidth="0dp"
-
+        app:elevation="26dp"
+        app:layout_anchor="@+id/content1a"
+        app:layout_anchorGravity="right|top"
         tools:layout_editor_absoluteX="284dp"
         tools:layout_editor_absoluteY="436dp"/>
+
 
 </android.support.design.widget.CoordinatorLayout>

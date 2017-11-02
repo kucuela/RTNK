@@ -1,20 +1,28 @@
 package studio.kucuela.myapplication;
 
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.skyfishjy.library.RippleBackground;
+
 
 
 
 public class MainActivity extends AppCompatActivity {
-
-
 
     TextView textView100;
     TextView textView200;
@@ -26,17 +34,14 @@ public class MainActivity extends AppCompatActivity {
     TextView textView800;
     TextView textView900;
     TextView textView1000;
-
-
     private TextView info;
     private EditText input;
 
     Spinner sp;
     ArrayAdapter<String> adapter;
     String numbers[] = { "-","Bojana", "Bojana iz Slankamena", "Bojana iz Krčedina", "Bojana Čorbašilov (Kazahstan)", "Bojana Donosilac Kiše", "Divna Maletin", "Bojana predstavnik Vodenih Ljudi", "Karumba",
-            "Tengba", "Pemba", "Minahonda", "Jajanda", "Svetozar", "Jorganče", "Sreten iz kupatila", "Gospodin sa bubama", "Advokat Krtinić", "Odvjetnik Krtilić", "Kazuhiro", "Šojićiro",
-            "Hirokazu", "Mario Japanac", "General Rivotril", "General Rivotrilko", "Generalko Rivotrilko", "Generalčić Rivotrilčić", "Dona Esperansa","Desanka sa ogledalima"};
-
+            "Tengba", "Pemba", "Minahonda", "Jajanda", "Svetozar", "Jorganče", "Sreten iz kupatila", "Gospodin sa bubama", "Advokat Krtinić", "Odvjetnik Krtilić","Gospodin Rtnić", "Kazuhiro", "Šojićiro",
+            "Hirokazu", "Mario Japanac", "General Rivotril", "General Rivotrilko", "Generalko Rivotrilko", "Generalčić Rivotrilčić", "Dona Esperansa","Desanka sa ogledalima","Magacionerka Rajka"};
 
     Spinner sp1;
     ArrayAdapter<String> adapter1;
@@ -89,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
     Spinner sp14;
     ArrayAdapter<String> adapter14;
-    String numbers14[] = {"-", "Svet je roze!", "Svet je zelen!"};
+    String numbers14[] = {"-", "Na 9 sati", "Na 10 sati i 10 minuta","Na 11 sati i 5 minuta","Na 12 sati","Na 12 sati i 5 minuta","Na 12 sati i 15 minuta","Nogice u X"};
 
     Spinner sp15;
     ArrayAdapter<String> adapter15;
@@ -105,7 +110,9 @@ public class MainActivity extends AppCompatActivity {
 
     Spinner sp18;
     ArrayAdapter<String> adapter18;
-    String numbers18[] = {"-","Dobro","Loše","Depresivno","Besno","Euforično","Histerično","Melanholično","Napaljeno","Gladno","Umorno","Sveže","Bajato"};
+    String numbers18[] = {"-","Dobro","Loše","Neutralno","Depresivno","Besno","Euforično","Histerično","Melanholično","Napaljeno","Gladno","Žedno","Umorno","Sveže","Bajato","Jedva gledam na oči",
+    "Jedva stojim na nogama","Imao/la sam i boljih dana","Ne mogu da se sastavim","Ne znam di bijem","Sad sam ustao/la","Spičim ovu pa u krevet","Spičim ovu pa na posao","Spičim ovu pa na kurs",
+    "Spičim ovu pa idem malo napolje"};
 
 
 
@@ -122,11 +129,55 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
         setContentView(R.layout.activity_main);
         info = (TextView) findViewById(R.id.textViewZlodi);
         input = (EditText)findViewById(R.id.editText11);
+
+        //uvodne animacije texta
+
+        final TextView txt2 = (TextView) findViewById(R.id.textView11);
+        txt2.setText("KORISNIK \nodaberite korisnika");
+        txt2.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(),android.R.anim.slide_in_left));
+
+        final TextView txt21 = (TextView) findViewById(R.id.textView12);
+        txt21.setText("LOKACIJA \nunesite lokaciju");
+        txt21.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(),android.R.anim.slide_in_left));
+
+        final TextView txt22 = (TextView) findViewById(R.id.textView13);
+        txt22.setText("OPIJAT \ntip opijata");
+        txt22.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(),android.R.anim.slide_in_left));
+
+        final TextView txt23 = (TextView) findViewById(R.id.textView29);
+        txt23.setText("OPŠTE STANJE \nuoči konzumacije ");
+        txt23.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(),android.R.anim.slide_in_left));
+
+
+
+
+
+
+        Toast.makeText(getBaseContext(), "Dobrodošli na glavni Rtnk test.",
+                Toast.LENGTH_SHORT).show();
+
+        final RippleBackground rippleBackground=(RippleBackground)findViewById(R.id.content1a);
+        FloatingActionButton imageView=(FloatingActionButton)findViewById(R.id.btn_buy);
+        rippleBackground.startRippleAnimation();
+
+        // Enables ActionBar app icon to behave as action to toggle NavigationDrawer
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        final android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(false);
+            //actionBar.setHomeAsUpIndicator(R.drawable.ic_drawer);
+            actionBar.setHomeButtonEnabled(false);
+            getSupportActionBar().setDisplayShowTitleEnabled( true );
+            getSupportActionBar().setTitle("Glavni Rtnk test");
+            actionBar.show();
+        }
+
+
 
 
 
@@ -512,15 +563,111 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+
+    // Method(s) that manage Toolbar.
+
+    // onCreateOptionsMenu method initialize the contents of the Activity's Toolbar.
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    /*// onOptionsItemSelected method is called whenever an item in the Toolbar is selected.
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_create:
+                finish();
+                startActivity(getIntent());
+
+            case R.id.action_update:
+                Intent intent = new Intent(this, SecondActivity.class);
+                startActivity(intent);
+
+            case R.id.action_delete:
+                Intent intent = new Intent(this, ThirdActivity.class);
+                startActivity(intent);
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }*/
+
+    // Overrides setTitle method to support older api levels
+    @Override
+    public void setTitle(CharSequence title) {
+        getSupportActionBar().setTitle(title);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_create) {
+            Intent intent1 = new Intent(this, MainActivity.class);
+            startActivity(intent1);
+            finish();
+
+
+
+
+
+
+            return true;
+        }
+
+        if (id == R.id.action_update) {
+            Intent intent1 = new Intent(this, SecondActivity.class);
+            startActivity(intent1);
+
+
+
+
+            return true;
+        }
+
+        if (id == R.id.action_delete) {
+            Intent intent1 = new Intent(this, ThirdActivity.class);
+            startActivity(intent1);
+
+
+
+
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     //SHARE DUGME
     public void floater (View view) {
+
+
 
 
         Intent sendIntent = new Intent();
         String date = String.valueOf(android.text.format.DateFormat.format("EE,dd.MMMM, HH:mm", new java.util.Date()));
         String inputText = input.getText().toString();
         info.setText(inputText);
-
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, "REZULTATI TESTA"+"\n\nVREME: "+date+"\nKORISNIK: " + sp.getSelectedItem().toString()+"\nLOKACIJA: "
                 +sp1.getSelectedItem().toString()+"\nOPIJAT: "+sp2.getSelectedItem().toString()
@@ -528,22 +675,23 @@ public class MainActivity extends AppCompatActivity {
                 "\n\nRTN: "+sp6.getSelectedItem().toString()+"\nKACA: "+sp7.getSelectedItem().toString()+"\nMORE/OBLACI: "
                 +sp8.getSelectedItem().toString()+"\nSVETLA: "+sp9.getSelectedItem().toString()+"\nUDARAC: "+sp10b.getSelectedItem().toString()+"\n"+sp10.getSelectedItem().toString()+"/"+sp10a.getSelectedItem().toString()
                 +"\nAKTIVNOST: "+sp11.getSelectedItem().toString()+"\nZAKRIVLJENOST: "+sp17.getSelectedItem().toString()+"\n\nRTN PO KRTINIĆEVOJ SKALI: "+sp12.getSelectedItem().toString()+"\nKACA PO KRTINIĆEVOJ SKALI: "
-                +sp13.getSelectedItem().toString()+"\nROZE/ZELENO: "+sp14.getSelectedItem().toString()+"\nJAKNA/PAPUČE: "+sp15.getSelectedItem().toString()
+                +sp13.getSelectedItem().toString()+"\nNOGICE: "+sp14.getSelectedItem().toString()+"\nJAKNA/PAPUČE: "+sp15.getSelectedItem().toString()
                 +"\nŠTA IMATE DA DODATE: "+"\n"+sp16.getSelectedItem().toString()+"\n\nOPŠTI UTISAK/NAPOMENE: "+"\n"+input.getText());
         sendIntent.setType("text/plain");
 
         startActivity(sendIntent);
-        finish();
 
 
 
-        /*startActivity(sendIntent);
 
-        startActivity(getIntent());*/
+
 
 
 
     }
+
+
+
 
 
 
