@@ -1,7 +1,6 @@
 package studio.kucuela.myapplication;
 
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -149,7 +148,7 @@ public class ThirdActivity extends AppCompatActivity {
     // onCreateOptionsMenu method initialize the contents of the Activity's Toolbar.
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.menu2, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -191,29 +190,8 @@ public class ThirdActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_create) {
-            Intent intent1 = new Intent(this, MainActivity.class);
-            startActivity(intent1);
-
-
-
-
-            return true;
-        }
-
-        if (id == R.id.action_update) {
-            Intent intent1 = new Intent(this, SecondActivity.class);
-            startActivity(intent1);
-
-
-
-
-            return true;
-        }
-
-        if (id == R.id.action_delete) {
-            Intent intent1 = new Intent(this, ThirdActivity.class);
-            startActivity(intent1);
             finish();
+
 
 
 

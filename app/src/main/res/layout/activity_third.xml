@@ -101,7 +101,7 @@
                             android:textAlignment="textStart"
                             android:textAllCaps="false"
                             android:textColor="@android:color/background_light"
-                            android:textSize="18sp"/>
+                            android:textSize="17sp"/>
 
                         <TextView
                             android:id="@+id/textView2"
@@ -118,7 +118,7 @@
                             android:textAlignment="textStart"
                             android:textAllCaps="false"
                             android:textColor="@android:color/background_light"
-                            android:textSize="18sp"/>
+                            android:textSize="17sp"/>
 
                         <TextView
                             android:id="@+id/textView17"
@@ -135,7 +135,7 @@
                             android:textAlignment="textStart"
                             android:textAllCaps="false"
                             android:textColor="@android:color/background_light"
-                            android:textSize="18sp"/>
+                            android:textSize="17sp"/>
 
                     </LinearLayout>
 
@@ -158,7 +158,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="271dp"
-        android:layout_marginTop="283dp"
+        android:layout_marginTop="281dp"
         app:rb_color="@color/colorAccent"
         app:rb_duration="3000"
         app:rb_radius="9dp"
@@ -178,7 +178,7 @@
         android:layout_gravity="bottom|end"
 
         android:layout_marginRight="10dp"
-        android:layout_marginTop="305dp"
+        android:layout_marginTop="302dp"
         android:onClick="floatera"
         android:src="@drawable/playa"
         app:backgroundTint="@color/colorAccent"
@@ -196,7 +196,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="271dp"
-        android:layout_marginTop="378dp"
+        android:layout_marginTop="375dp"
         app:rb_color="@color/colorAccent"
         app:rb_duration="3000"
         app:rb_radius="9dp"
@@ -216,7 +216,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="10dp"
 
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="397dp"
         android:onClick="onClick"
         android:src="@drawable/playa"
         app:backgroundTint="@color/colorAccent"
@@ -234,7 +234,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="271dp"
-        android:layout_marginTop="473dp"
+        android:layout_marginTop="470dp"
         app:rb_color="@color/colorAccent"
         app:rb_duration="3000"
         app:rb_radius="9dp"
@@ -254,7 +254,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="10dp"
 
-        android:layout_marginTop="495dp"
+        android:layout_marginTop="492dp"
         android:onClick="onClick"
         android:src="@drawable/playa"
         app:backgroundTint="@color/colorAccent"

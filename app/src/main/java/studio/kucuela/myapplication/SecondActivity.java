@@ -218,7 +218,7 @@ public class SecondActivity extends AppCompatActivity {
     // onCreateOptionsMenu method initialize the contents of the Activity's Toolbar.
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.menu1, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -258,36 +258,14 @@ public class SecondActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_create) {
-            Intent intent1 = new Intent(this, MainActivity.class);
-            startActivity(intent1);
 
-
-
-
-            return true;
-        }
-
-        if (id == R.id.action_update) {
-            Intent intent1 = new Intent(this, SecondActivity.class);
-            startActivity(intent1);
             finish();
 
 
 
 
             return true;
-        }
 
-        if (id == R.id.action_delete) {
-            Intent intent1 = new Intent(this, ThirdActivity.class);
-            startActivity(intent1);
-
-
-
-
-
-
-            return true;
         }
 
         return super.onOptionsItemSelected(item);
